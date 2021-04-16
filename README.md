@@ -20,4 +20,4 @@ Your app is ready to be deployed!
 
 ### `Demo`
 
-Click [here](https://github.com/mmt8467/assessment_cars_24/build/index.html) to run.
+Click [here](https://mmt8467.github.io/assessment_cars_24/build/) to run.
