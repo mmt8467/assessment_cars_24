@@ -43,9 +43,11 @@ const SearchBox = () => {
         }
     };
 
-    const onSelectItem = useCallback((info) => {
-        textInput.current.value = info.name;
-        setSearchResult(null);
+    const onSelectItem = useCallback((evt, info) => {
+        if (evt.key === 'Enter' || evt.type === 'click') {
+            textInput.current.value = info.name;
+            setSearchResult(null);
+        }
     }, [searchResult]);
 
     return (

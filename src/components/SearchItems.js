@@ -9,7 +9,7 @@ const SearchItems = React.memo(({ searchResult, onSelect }) => {
     
     return (
         <div style={styles.searchResultContainer}>
-            {results.map(item => <div key={item.id} style={styles.searchItems} onClick={() => onSelect(item)}>{item.name}</div>)}
+            {results.map(item => <div key={item.id} tabindex="0" style={styles.searchItems} onKeyDown={(evt) => onSelect(evt, item)} onClick={(evt) => onSelect(evt, item)}>{item.name}</div>)}
         </div>
     )
 })
