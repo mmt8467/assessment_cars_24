@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/assessment_cars_24/build/static/css/main.ec4874b8.chunk.css",
-    "main.js": "/assessment_cars_24/build/static/js/main.aef7bb95.chunk.js",
+    "main.css": "/assessment_cars_24/build/static/css/main.7aec364d.chunk.css",
+    "main.js": "/assessment_cars_24/build/static/js/main.dd84124e.chunk.js",
     "runtime-main.js": "/assessment_cars_24/build/static/js/runtime-main.c4c6fbbd.js",
-    "static/js/2.13036896.chunk.js": "/assessment_cars_24/build/static/js/2.13036896.chunk.js",
+    "static/js/2.74cce945.chunk.js": "/assessment_cars_24/build/static/js/2.74cce945.chunk.js",
     "static/js/3.c84f5cd8.chunk.js": "/assessment_cars_24/build/static/js/3.c84f5cd8.chunk.js",
     "index.html": "/assessment_cars_24/build/index.html",
-    "static/js/2.13036896.chunk.js.LICENSE.txt": "/assessment_cars_24/build/static/js/2.13036896.chunk.js.LICENSE.txt",
+    "static/js/2.74cce945.chunk.js.LICENSE.txt": "/assessment_cars_24/build/static/js/2.74cce945.chunk.js.LICENSE.txt",
     "static/media/icon_search.65edf5d2.svg": "/assessment_cars_24/build/static/media/icon_search.65edf5d2.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c4c6fbbd.js",
-    "static/js/2.13036896.chunk.js",
-    "static/css/main.ec4874b8.chunk.css",
-    "static/js/main.aef7bb95.chunk.js"
+    "static/js/2.74cce945.chunk.js",
+    "static/css/main.7aec364d.chunk.css",
+    "static/js/main.dd84124e.chunk.js"
   ]
 }

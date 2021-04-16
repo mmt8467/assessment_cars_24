@@ -8,6 +8,7 @@ import searchIcon from '../icon_search.svg';
 const SearchBox = () => {
     const [searchText, setSearchText] = useState('');
     const [searchResult, setSearchResult] = useState(null);
+    const [loading, setLoading] = useState(false);
     const textInput = useRef(null);
 
     useEffect(() => {
@@ -26,12 +27,19 @@ const SearchBox = () => {
     const updateSearchText = debounce((value) => setSearchText(value));
 
     const searchRequest = (val) => {
-        if(!val && searchResult) {
+        try {
+            if(!val && searchResult) {
+                setSearchResult(null);
+            } else if(val) {
+                setLoading(true);
+                characterApiRequest(val).then((result) => {
+                    setSearchResult(result);
+                    setLoading(false);
+                })
+            }
+        } catch(e) {
+            setLoading(false);
             setSearchResult(null);
-        } else if(val) {
-            characterApiRequest(val).then((result) => {
-                setSearchResult(result);
-            })
         }
     };
 
@@ -42,8 +50,8 @@ const SearchBox = () => {
 
     return (
         <div style={styles.searchBoxContainer}>
-            <div style={{ position: 'relative' }}>
-                <img src={searchIcon} style={styles.serachIcon} />
+            <div className={`${loading ? 'spinner' : ''}`} style={{ position: 'relative' }}>
+                {!loading && <img src={searchIcon} style={styles.serachIcon} />}
                 <input ref={textInput} onChange={onSearchTextChange} style={styles.serachBox} type="text"></input>
             </div>
             <SearchItems searchResult={searchResult} onSelect={onSelectItem} />
